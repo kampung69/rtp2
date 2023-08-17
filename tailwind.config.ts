@@ -8,11 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      animation: {
+        'shining': 'shining 2s ease-out infinite'
       },
+      keyframes: {
+        shining: {
+          "0%": {
+            right: "100%",
+            opacity: "0"
+          },
+          "50%": {
+            opacity: "0.3"
+          },
+          "100%": {
+            right: "0",
+          }
+        }
+      }
     },
   },
   plugins: [],
